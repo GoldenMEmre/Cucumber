@@ -8,10 +8,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@regression and @smoke",
+        tags = "@wip",
 
-        dryRun = false
-)
+        dryRun = false//Testlerimizi çalıştırmak istediğimizde buradaki değer false olacak.
+)       //Eğer eksik adımları tespit etmek istiyorsak true değeri alacak
 
 public class Runner {
         /*
