@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class QualitydemyPage {
 
-    public QualitydemyPage(){
+    public QualitydemyPage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

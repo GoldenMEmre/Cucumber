@@ -6,9 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin={"html:target\\cucumber-reports.html"},//Rapor almak için bu classtan çalıştırmalıyız.
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@wip",
+        tags = "@smoke",
 
         dryRun = false//Testlerimizi çalıştırmak istediğimizde buradaki değer false olacak.
 )       //Eğer eksik adımları tespit etmek istiyorsak true değeri alacak
