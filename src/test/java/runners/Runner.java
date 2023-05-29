@@ -6,10 +6,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin={"html:target\\cucumber-reports.html"},//Rapor almak için bu classtan çalıştırmalıyız.
+        plugin={"html:target/cucumber-reports.html",//Rapor almak için bu classtan çalıştırmalıyız.
+                "json:target/json-reports/cucumber.json",//(devam)cucumber-reports kısmı isteğe
+                "junit:target/xml-report/cucumber.xml" // göre isimlendirilebilir
+        },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@smoke",
+        tags = "@ss",
 
         dryRun = false//Testlerimizi çalıştırmak istediğimizde buradaki değer false olacak.
 )       //Eğer eksik adımları tespit etmek istiyorsak true değeri alacak
