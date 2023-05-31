@@ -12,10 +12,10 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@ss",
+        tags = "@regression",
 
         dryRun = false//Testlerimizi çalıştırmak istediğimizde buradaki değer false olacak.
-)       //Eğer e
+)       //Eğer eksik adımları tespit etmek istiyorsak true değeri alacak
 
 public class ParalelRunner2 {
 }

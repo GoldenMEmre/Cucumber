@@ -16,6 +16,6 @@ import org.junit.runner.RunWith;
         tags = "@ss",
 
         dryRun = false//Testlerimizi çalıştırmak istediğimizde buradaki değer false olacak.
-)       //Eğer e
+)       //Eğer eksik adımları tespit etmek istiyorsak true değeri alacak
 public class ParalelRunner1 {
 }

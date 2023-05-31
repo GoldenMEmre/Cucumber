@@ -12,9 +12,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@ss",
+        tags = "@ae",//Hangi feature'yi degistirmek istiyorsak burayi ona gore degistiriyoruz
 
-        dryRun = false//Testlerimizi çalıştırmak istediğimizde buradaki değer false olacak.
+        dryRun = true//Testlerimizi çalıştırmak istediğimizde buradaki değer false olacak.
 )       //Eğer eksik adımları tespit etmek istiyorsak true değeri alacak
 
 public class Runner {
