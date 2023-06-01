@@ -13,4 +13,13 @@ public class AutoExerPage {
 
     @FindBy(xpath = "//*[text()=' Signup / Login']")
     public WebElement signUpLinki;
+
+    @FindBy(xpath = "//*[@*='signup-name']")
+    public WebElement signUpNameKutusu;
+
+    @FindBy(xpath = "//input[@data-qa='signup-email']")
+    public WebElement signUpEmailKutusu;
+
+    @FindBy(xpath = "//*[@data-qa='signup-button']")
+    public WebElement signUpButonu;
 }
