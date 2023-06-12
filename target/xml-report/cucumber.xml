@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="27.836" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US1009 Kullanici Automation Exercise sayfasinda yeni kullanici olusturur" name="TC15 Kullanici kendi bilgileriyle yeni kullanici olusturabilmeli" time="27.518">
+<testsuite name="Cucumber" time="56.882" tests="2" skipped="0" failures="1" errors="0">
+<testcase classname="US1011 Kullanici web tablosundaki sirketleri yazdirir" name="TC17 Kullanici listeyi yazdirir ve aranan sirketin varligini test eder" time="41.092">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.GuruStepdefinitions.listedeOldugunuTestEder(GuruStepdefinitions.java:37)
+	at ✽.listede "DCB Bank" oldugunu test eder(file:///C:/Users/hasba/IdeaProjects/com.Team113_Cucumber/src/test/resources/features/US1011_Guru99.feature:8)
+]]>
+</failure>
 <system-out><![CDATA[
-Given Kullanici "aeUrl" anasayfaya gider....................................passed
-And user sign up linkine tiklar.............................................passed
-And 2 saniye bekler.........................................................passed
-And user Create an account bolumune name ve email adresi girer..............passed
-And signUp butonuna basar...................................................passed
-And user kisisel bilgilerini ve iletisim bilgilerini girer..................passed
-And user Create Account butonuna basar......................................passed
-Then hesap olustugunu test edin.............................................passed
+Given Kullanici "guruUrl" anasayfaya gider..................................passed
+Then Company listesini consola yazdirir.....................................passed
+And listede "DCB Bank" oldugunu test eder...................................failed
+Then tum sayfa Screenshot alir..............................................skipped
+And Sayfayi kapatir.........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="US1012 Kullanici istedigi firmanin onceki gunki kapanis degerini okur" name="TC18 DCB'nin onceki kapanis degerini test eder" time="15.42">
+<system-out><![CDATA[
+Given Kullanici "guruUrl" anasayfaya gider..................................passed
+And "DCB Bank" Prev.Close degerini yazdirir.................................passed
+Then Prev.Close degerinin "123,8" oldugunu test eder........................passed
+And 3 saniye bekler.........................................................passed
+Then tum sayfa Screenshot alir..............................................passed
+And Sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

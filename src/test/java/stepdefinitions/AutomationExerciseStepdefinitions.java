@@ -85,4 +85,17 @@ public class AutomationExerciseStepdefinitions {
         autoExerPage.signUpEmailKutusu.sendKeys(emailAdress);//hem de yolladık
     }
 
+    @Then("Login to your account bolumunde email kutusuna @isareti olmayan email adresi yazar")
+    public void login_to_your_account_bolumunde_email_kutusuna_isareti_olmayan_email_adresi_yazar() {
+        autoExerPage.loginEmailKutusu.sendKeys("ByeByeWorld");//Bu kısmı diğer testlerimizde
+    //de kullanacaksak configuration.properties'e ekleyebiliriz.
+    }
+    @Then("password kutusuna sifre yazar ve enter'a tiklar")
+    public void password_kutusuna_sifre_yazar_ve_enter_a_tiklar() {
+        autoExerPage.loginPasswordKutusu.sendKeys("SeeYouSoon" + Keys.ENTER);
+    }
+    @Then("sisteme giris yapilamadigini test eder")
+    public void sistemeGirisYapilamadiginiTestEder() {
+        Assert.assertTrue(autoExerPage.loginPasswordKutusu.isEnabled());
+    }
 }
